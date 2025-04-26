@@ -58,6 +58,14 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertTrue(loginpage.isPasswordLinkExist(), AppError.ELEMENT_NOT_FOUND_ERROR);
 	}
 	
+	@Test
+	@Description("checking register button link....")
+	@Severity(SeverityLevel.NORMAL)
+	@Step("Verifying register link is exist or not...")
+	public void registerLinkExistTest() {
+		Assert.assertTrue(loginpage.isCreteRegisterPageButtonExist(), AppError.ELEMENT_NOT_FOUND_ERROR);
+	}
+	
 	
 	@Test(priority = Integer.MAX_VALUE)
 	@Description("checking user is able to login with correct credentials....")

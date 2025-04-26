@@ -29,6 +29,7 @@ public class LoginPage {
 	private By password= By.id("input-password");
 	private By loginButton = By.xpath("//input[@value='Login']");
 	private By forgotPWDLink = By.linkText("Forgotten Password");
+	private By createRegisterPageLink = By.linkText("Continue");
 	
 	//2. public page actions - methods (features)
 	@Step("getting login page title step....")
@@ -49,6 +50,11 @@ public class LoginPage {
 	
 	public boolean isPasswordLinkExist() {
 		return eleUtil.doElementIsDisplayed(forgotPWDLink);
+	}
+	
+	@Step("Verifying register page button....")
+	public boolean isCreteRegisterPageButtonExist() {
+		return eleUtil.doElementIsDisplayed(createRegisterPageLink);
 	}
 	
 	@Step("login with username: {0} and passowrd: {1} step...")
